@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Atharva Dangra — Thinking</title>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+
+<body>
+
+<div class="page-wipe"></div>
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+
+
+<!-- HEADER -->
+
+<header class="topbar">
+
+  <a class="mark" href="index.html" data-page>
+    AD<span>·</span>
+  </a>
+
+  <a class="resume-link" href="resume.pdf" target="_blank">
+    résumé <span>↗</span>
+  </a>
+
+</header>
+
+
+<!-- NAVIGATION -->
+
+<nav class="nav">
+
+  <a href="index.html" data-page>
+    about
+  </a>
+
+  <a href="work.html" data-page>
+    work
+  </a>
+
+  <a href="research.html" data-page>
+    research
+  </a>
+
+  <a href="thinking.html" data-page class="active">
+    thinking
+  </a>
+
+  <a href="contact.html" data-page>
+    contact
+  </a>
+
+</nav>
+
+
+<main>
+
+
+<!-- =========================================
+     INTRO
+========================================= -->
+
+<section class="page-hero section-pad">
+
+  <div class="page-intro reveal">
+
+    <p class="eyebrow">
+      04 / thinking
+    </p>
+
+    <h1 class="page-title">
+      I tend to see<br>
+      <em>spaces first.</em>
+    </h1>
+
+    <p>
+      I keep coming back to the same kind of question:
+      what changes when the space around a problem changes?
+    </p>
+
+  </div>
+
+
+  <div class="page-mark reveal">
+    →
+  </div>
+
+</section>
+
+
+
+<!-- =========================================
+     THE QUESTION
+========================================= -->
+
+<section class="section-pad">
+
+  <div class="thinking-grid">
+
+
+    <!-- LEFT -->
+
+    <div class="reveal">
+
+      <p class="eyebrow">
+        one recurring question
+      </p>
+
+      <h2>
+        What changes<br>
+        when the <em>space</em><br>
+        changes?
+      </h2>
+
+    </div>
+
+
+    <!-- RIGHT -->
+
+    <div class="thinking-copy reveal">
+
+      <p class="big-thought">
+        A molecule. A map. A piece of text. A dataset.
+      </p>
+
+
+      <p>
+        They're very different things, but I keep finding myself
+        asking a surprisingly similar question about all of them:
+      </p>
+
+
+      <div class="question">
+
+        <span>
+          what happens if
+        </span>
+
+        <strong>
+          we define the space<br>
+          and measure the distance?
+        </strong>
+
+        <span>
+          ?
+        </span>
+
+      </div>
+
+
+      <p>
+        That idea keeps appearing in the things I work on —
+        molecular similarity, spatial data, machine learning,
+        geometry, and the mathematics I'm beginning to explore.
+      </p>
+
+
+      <p>
+        I'm not sure I have a single answer to it yet.
+        I'm more interested in seeing where the question leads.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================
+     INTERACTIVE DISTANCE
+========================================= -->
+
+<section class="section-pad thinking-playground">
+
+  <div class="thinking-playground-intro reveal">
+
+    <p class="eyebrow">
+      a small experiment
+    </p>
+
+    <h2>
+      Define the space.<br>
+      <em>Measure the distance.</em>
+    </h2>
+
+    <p>
+      Move either point. The distance changes.
+    </p>
+
+  </div>
+
+
+  <div class="distance-box reveal">
+
+    <div class="distance-label">
+
+      <span>
+        euclidean distance
+      </span>
+
+      <strong id="distanceReadout">
+        d(A,B) = 4.00
+      </strong>
+
+    </div>
+
+
+    <svg
+      id="distancePlane"
+      viewBox="0 0 700 300"
+      aria-label="Interactive distance between two points"
+    >
+
+      <!-- subtle coordinate system -->
+
+      <line
+        x1="40"
+        y1="250"
+        x2="660"
+        y2="250"
+        class="distance-axis"
+      />
+
+      <line
+        x1="40"
+        y1="40"
+        x2="40"
+        y2="250"
+        class="distance-axis"
+      />
+
+
+      <!-- faint grid -->
+
+      <g class="distance-grid">
+
+        <line x1="140" y1="40" x2="140" y2="250"/>
+        <line x1="240" y1="40" x2="240" y2="250"/>
+        <line x1="340" y1="40" x2="340" y2="250"/>
+        <line x1="440" y1="40" x2="440" y2="250"/>
+        <line x1="540" y1="40" x2="540" y2="250"/>
+
+        <line x1="40" y1="90" x2="660" y2="90"/>
+        <line x1="40" y1="150" x2="660" y2="150"/>
+        <line x1="40" y1="210" x2="660" y2="210"/>
+
+      </g>
+
+
+      <!-- connecting distance -->
+
+      <line
+        id="distanceLine"
+        x1="190"
+        y1="180"
+        x2="510"
+        y2="100"
+        class="distance-line"
+      />
+
+
+      <!-- point A -->
+
+      <circle
+        id="pointA"
+        cx="190"
+        cy="180"
+        r="7"
+        class="distance-point point-a"
+      />
+
+      <text
+        id="labelA"
+        x="180"
+        y="165"
+        class="distance-point-label"
+      >
+        A
+      </text>
+
+
+      <!-- point B -->
+
+      <circle
+        id="pointB"
+        cx="510"
+        cy="100"
+        r="7"
+        class="distance-point point-b"
+      />
+
+      <text
+        id="labelB"
+        x="520"
+        y="92"
+        class="distance-point-label"
+      >
+        B
+      </text>
+
+
+      <!-- distance marker -->
+
+      <text
+        id="distanceFormula"
+        x="350"
+        y="125"
+        class="distance-formula"
+      >
+        d(A,B)
+      </text>
+
+    </svg>
+
+
+    <div class="distance-caption">
+
+      <span>
+        drag
+      </span>
+
+      <p>
+        A very small version of the idea I keep coming back to:
+        define a space, place things inside it, and ask how far apart they are.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================
+     INTERLUDE
+========================================= -->
+
+<section class="intro-band">
+
+  <div class="band-symbol">
+    ∂
+  </div>
+
+
+  <p>
+    I'm interested in the part between<br>
+    <span>
+      the question and the answer.
+    </span>
+  </p>
+
+
+  <div class="band-coords">
+    iteration → understanding
+  </div>
+
+</section>
+
+
+
+<!-- =========================================
+     CLOSING
+========================================= -->
+
+<section class="closing">
+
+  <div class="closing-symbol">
+    ?
+  </div>
+
+
+  <p class="closing-line">
+    Maybe understanding the space<br>
+    changes the way we see the problem.
+  </p>
+
+
+  <p class="closing-small">
+    I'm still figuring that one out.
+  </p>
+
+</section>
+
+
+</main>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

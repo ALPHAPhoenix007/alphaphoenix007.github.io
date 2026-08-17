@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Atharva Dangra — Research</title>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+
+<body>
+
+<div class="page-wipe"></div>
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+
+
+<!-- HEADER -->
+
+<header class="topbar">
+
+  <a class="mark" href="index.html" data-page>
+    AD<span>·</span>
+  </a>
+
+  <a class="resume-link" href="resume.pdf" target="_blank">
+    résumé <span>↗</span>
+  </a>
+
+</header>
+
+
+<!-- NAVIGATION -->
+
+<nav class="nav">
+
+  <a href="index.html" data-page>
+    about
+  </a>
+
+  <a href="work.html" data-page>
+    work
+  </a>
+
+  <a href="research.html" data-page class="active">
+    research
+  </a>
+
+  <a href="thinking.html" data-page>
+    thinking
+  </a>
+
+  <a href="contact.html" data-page>
+    contact
+  </a>
+
+</nav>
+
+
+<main>
+
+
+<!-- =========================================
+     RESEARCH INTRO
+========================================= -->
+
+<section class="page-hero section-pad">
+
+  <div class="page-intro reveal">
+
+    <p class="eyebrow">
+      03 / research
+    </p>
+
+    <h1 class="page-title">
+      Where I get<br>
+      <em>mathematical.</em>
+    </h1>
+
+    <p>
+      I'm interested in what happens when familiar mathematical
+      ideas stop living in familiar dimensions.
+    </p>
+
+  </div>
+
+
+  <div class="page-mark reveal">
+    ℝ⁴
+  </div>
+
+</section>
+
+
+
+<!-- =========================================
+     RESEARCH
+========================================= -->
+
+<section class="section-pad research-grid">
+
+
+  <!-- RESEARCH TEXT -->
+
+  <div class="research-copy stagger">
+
+
+    <!-- HYPERVOLUME -->
+
+    <article class="research-item">
+
+      <span class="research-index">
+        01
+      </span>
+
+      <div>
+
+        <p class="research-type">
+          IN PROGRESS
+        </p>
+
+        <h3>
+          Hypervolume in 4D Space
+        </h3>
+
+        <p>
+          I'm exploring what volume looks like when there is
+          one more dimension than we're used to. The goal is to
+          understand how hypervolume can be defined, reasoned
+          about and visualised in four-dimensional space.
+        </p>
+
+      </div>
+
+    </article>
+
+
+
+    <!-- CARDINALITY -->
+
+    <article class="research-item">
+
+      <span class="research-index">
+        02
+      </span>
+
+      <div>
+
+        <p class="research-type">
+          IN PROGRESS
+        </p>
+
+        <h3>
+          Cardinality in Higher-Dimensional Sets
+        </h3>
+
+        <p>
+          I'm exploring how ideas of cardinality can be thought
+          about beyond their usual discrete settings, and working
+          through the formal questions that appear when sets are
+          considered in higher-dimensional contexts.
+        </p>
+
+      </div>
+
+    </article>
+
+
+
+    <!-- NOTE -->
+
+    <div class="research-note">
+
+      <span>
+        note to self
+      </span>
+
+      <p>
+        I'm still learning. That's half the fun.
+      </p>
+
+    </div>
+
+
+  </div>
+
+
+
+  <!-- =========================================
+       INTERACTIVE 4D TESSERACT
+
+       DO NOT CHANGE THE IDs HERE.
+       script.js depends on them.
+  ========================================== -->
+
+  <div class="tesseract-wrap reveal">
+
+    <div class="tesseract-label">
+
+      <span>
+        projection / 04D → 02D
+      </span>
+
+      <span id="angleReadout">
+        θxw 18° · θyz 10°
+      </span>
+
+    </div>
+
+
+    <svg
+      id="tesseract"
+      viewBox="0 0 520 430"
+      aria-label="Interactive 4D tesseract projection"
+    >
+
+      <g id="tesseractEdges"></g>
+
+      <g id="tesseractPoints"></g>
+
+    </svg>
+
+
+    <div class="tesseract-caption">
+
+      <span>
+        drag
+      </span>
+
+      <p>
+        Move the shape. You're rotating a 4D object
+        and looking at its 2D projection.
+      </p>
+
+    </div>
+
+  </div>
+
+
+</section>
+
+
+
+<!-- =========================================
+     CLOSING
+========================================= -->
+
+<section class="closing">
+
+  <div class="closing-symbol">
+    ∴
+  </div>
+
+  <p class="closing-line">
+    The interesting part isn't<br>
+    always knowing the answer.
+  </p>
+
+  <p class="closing-small">
+    Sometimes it's figuring out what the question should be.
+  </p>
+
+</section>
+
+
+</main>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
